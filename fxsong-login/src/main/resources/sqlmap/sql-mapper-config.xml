@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+<!-- 		<setting name="lazyLoadingEnabled" value="true" /> -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+<!-- 
+    <typeAliases>
+		<typeAlias alias="EgovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/> 
+		<typeAlias alias="FileVO" type="sfmi.comp.comsol.com.file.service.FileVO"/> 
+    </typeAliases>
+ -->
+    <!-- 
+    <plugins>
+        <plugin interceptor="sfmi.comp.comsol.util.paginator.OffsetLimitInterceptor">
+            <property name="dialectClass" value="sfmi.comp.comsol.util.paginator.dialect.OracleDialect"/>
+        </plugin>
+        <plugin interceptor="sfmi.comp.comsol.util.resultset.ResultSetInterceptor" />
+    </plugins> 
+    -->
+    
+</configuration>

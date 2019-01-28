@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Configuration> 
+	<!-- 
+	* FATAL > ERROR > WARN  > INFO  >  DEBUG 
+	* http://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rte3:fdl:logging:log4j_2:%EC%84%A4%EC%A0%95_%ED%8C%8C%EC%9D%BC%EC%9D%84_%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94_%EB%B0%A9%EB%B2%95
+	-->
+	
+	<Properties>
+		<Property name="fileLogPattern">%d{yyyy-MM-dd HH:mm:ss.SSS} | %-5.5p | %-150l | %m%n</Property>
+		<Property name="logPattern2">%date | %level{length=3} | %msg - (%F:%L) %n</Property>
+		<Property name="logPattern3">%d{HH:mm:ss} | %level{length=3} | (%F:%L) | %m%n</Property>
+	</Properties>	
+	
+	<!-- Appender, Layout --> 
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${logPattern2}"/> 
+        </Console>
+    </Appenders>
+    
+    <!-- Logger --> 
+    <Loggers> 	    
+        <Logger name="com.fxsong" level="DEBUG" additivity="false">
+        	<AppenderRef ref="console" />
+        </Logger> 
+
+         <Logger name="org.springframework" level="INFO" additivity="false">
+	        <AppenderRef ref="console" />
+	    </Logger>
+	     
+        <Root level="INFO">
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
+

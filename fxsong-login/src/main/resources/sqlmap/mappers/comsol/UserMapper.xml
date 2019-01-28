@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fxsong.dao.UserDAO">
+
+ 	<select id="selectOne" resultType="com.fxsong.model.UserVO" parameterType="String">
+		SELECT USER_ID
+		     , USER_NM
+		     , USER_TY_CD_ID
+		  FROM TB_CO_USER
+		 WHERE USER_ID = #{userId}
+  	</select>
+
+ 	<select id="selectList" resultType="com.fxsong.util.CamelMap">
+		SELECT USER_ID
+		     , USER_NM
+		     , USER_TY_CD_ID
+		  FROM TB_CO_USER
+		 WHERE USER_ID = #{userId}
+  	</select>
+
+</mapper>
